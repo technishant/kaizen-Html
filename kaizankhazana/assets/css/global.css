@@ -206,11 +206,16 @@ html, body { font-family: 'robotoregular', sans-serif; }
 .admin-panel li.seprator { margin: 0 5px; width: 1px; height: 30px; text-align: center; line-height: 30px; }
 .admin-panel li.seprator span { display: inline-block; width: 1px; vertical-align: middle; height: 20px; background-color: #708d08; }
 
-
-.siderBox h3 { margin-bottom: 0px; }
+.siderBox { padding: 50px 60px 80px; overflow: hidden; background: #6fc400; position: relative; background: url(../images/sliderbg.jpg) center center no-repeat; background-size: cover; }
+.siderBox h3 { margin: 0px 0 20px; font-size: 30px; text-transform: none; text-align: center; color: #fff; }
 .siderBox .frames { margin-top: 15px; width: 100%; }
 .siderBox .frames img { width: 100%; }
-.siderBox { }
+.siderBox .owl-next, .siderBox .owl-prev { position: absolute; font-size: 12px; text-transform: uppercase; color: #6fc400; top: 50%; transition: all 0.3s; -webkit-transition: all 0.3s; left: -120px; height: 50px; width: 50px; border: 1px solid #6fc400; text-align: center; line-height: 48px;  background: #fff; }
+.siderBox .owl-next { left: auto; right: -120px; }
+.siderBox .owl-next:hover, .siderBox .owl-prev:hover { background: #6fc400; color: #fff; border-color: #fff; }
+.siderBox:hover .owl-prev { left: -55px; }
+.siderBox:hover .owl-next { right: -55px; }
+.siderBox .overlay { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); }
 .siderBox { }
 
 .registerBox label { color: #fff; text-shadow: none; font-weight: normal }
@@ -226,8 +231,10 @@ html, body { font-family: 'robotoregular', sans-serif; }
 .formViewBox img { width: 100%; display: block; }
 .formViewBox h3 { margin: 15px 0; }
 
-@media only screen and (max-width: 1200px) {
-
+@media only screen and (max-width: 1199px) {
+	
+	.menuBox li a { padding: 12px 10px; }
+	
 }
 
 @media only screen and (max-width: 1024px) {
@@ -238,11 +245,37 @@ html, body { font-family: 'robotoregular', sans-serif; }
 
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
+	
+	.logo { margin-top: 3px; width: 170px; }
+	.admin-panel li a { padding: 3px 10px; }
+	.menuBox li a { font-size: 12px; font-family: 'robotoregular'; padding: 10px 8px; }
+	
 }
 
 @media only screen and (max-width: 767px) {
 
+	.headerBox, .headerBox .container { padding: 0; }
+	.headerBox .logo { margin-left: 10px;}
+	.admin-panel { background: #14b5ea; width: 100%; margin: 0 !important; }
+	.menuBox { background: rgba(0,0,0,0.5); }
+	.menuBox  .navbar-nav { margin: 0; }
+	.admin-panel li, .menuBox li { float: left; width: 100%; }
+	.admin-panel li a, .menuBox li a { padding: 8px 15px; font-size: 13px; color: #fff; display: block; text-align: right; }
+	.menuBox li a:hover, .menuBox li a:active, .menuBox li a:focus, .menuBox li.active a, .admin-panel li a:hover { text-decoration: none; background: #fff; }
+	.logo { margin-top: 8px; }
+	.navbar-toggle { margin: 0 10px; color: #fff; }
+	.navbar-toggle.menubtn-top { margin: 0 10px 0 0; color: #14b5ea; }
+	.searchBox { height: auto; }
+	.searchBox .btn-primary { margin-top: 10px; }
+	.footer-list h4 { padding-top: 10px; }
+	.bottom-footer { margin-top: 15px; }
+	.bottom-footer .logo-footer, .bottom-footer ul { float: none; width: auto; }
+	.bottom-footer .logo-footer { width: 150px; display: block; margin-bottom: 10px; }
+	.bottom-footer li { padding: 0; }
+	.col-5, .featureBox .icon-section > li { width: 50%; float: left; }
+	.searchBox .icon-section { position: static; }
+	.mar-btm-100 { margin-bottom: 0 !important; }
 }
 
 @media only screen and (max-width: 700px) {
