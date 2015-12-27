@@ -36,8 +36,7 @@ $('#loadMore2').click(function (e) {
 $('#modal-show').modal('show');
 
 $(".slider-product").owlCarousel({
-
-    navigation: false,
+    navigation: true,
     pagination: false,
     slideSpeed : 300,
     paginationSpeed : 400,
